@@ -42,8 +42,6 @@ fn main() {
     let stream = may::net::TcpStream::connect(addr).unwrap();
     let client = HelloClient::new(stream).unwrap();
     println!("{}", client.hello("Mom".to_string()).unwrap());
-
-    server.shutdown();
 }
 ```
 
